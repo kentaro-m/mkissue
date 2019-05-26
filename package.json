@@ -1,7 +1,7 @@
 {
   "name": "csv2issue",
   "description": "Create GitHub issues from importing CSV file.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Kentaro Matsushita @kentaro-m",
   "bin": {
     "csv2issue": "./bin/run"
@@ -11,11 +11,14 @@
     "@oclif/command": "^1.5.13",
     "@oclif/config": "^1.13.0",
     "@oclif/plugin-help": "^2.1.6",
+    "@octokit/rest": "^16.27.0",
+    "@types/csv-parse": "^1.2.2",
+    "@types/node": "^12.0.2",
+    "csv-parse": "^4.4.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.21.2",
-    "@types/node": "^10.14.7",
     "globby": "^8.0.2",
     "ts-node": "^8.1.1",
     "typescript": "^3.4.5"
