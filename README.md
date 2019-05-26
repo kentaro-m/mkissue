@@ -59,7 +59,7 @@ EXAMPLES
 
 Create a CSV file in the following format using Excel or Google Sheets:
 ```csv
-title,body,label
+title,body,labels
 "Enable to install from npm registry",Body A,"feature request"
 "Save GitHub token for creating issues to local configuration file",Body B,"feature request"
 "Add ZenHub support",,"feature request, discussion"

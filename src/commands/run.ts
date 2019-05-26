@@ -76,13 +76,15 @@ Creating issues... done`
         const octokit = new Octokit(options)
 
         for (const item of data) {
-          await octokit.issues.create({
+          const params = {
             owner: owner,
             repo: repo,
             title: item.title,
             body: item.body,
-            labels: item.labels
-          });
+            labels: item.labels ? item.labels.split(',') : []
+          }
+
+          await octokit.issues.create(params);
         }
 
         cli.action.stop()
