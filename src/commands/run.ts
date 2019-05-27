@@ -48,7 +48,7 @@ Creating issues... done`
           data,
           {
             title: {},
-            label: {}
+            labels: {}
           },
           {printLine: this.log,}
         )
