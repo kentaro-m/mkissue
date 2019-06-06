@@ -1,12 +1,12 @@
 {
-  "name": "csv2issue",
+  "name": "mkissue",
   "description": "Create GitHub issues from importing CSV file.",
   "version": "1.0.0",
   "author": "Kentaro Matsushita @kentaro-m",
   "bin": {
-    "csv2issue": "./bin/run"
+    "mkissue": "./bin/run"
   },
-  "bugs": "https://github.com/csv2issue/csv2issue/issues",
+  "bugs": "https://github.com/kentaro-m/mkissue/issues",
   "dependencies": {
     "@oclif/command": "^1.5.13",
     "@oclif/config": "^1.13.0",
@@ -32,7 +32,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/csv2issue/csv2issue",
+  "homepage": "https://github.com/kentaro-m/mkissue",
   "keywords": [
     "oclif"
   ],
@@ -40,12 +40,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "csv2issue",
+    "bin": "mkissue",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "csv2issue/csv2issue",
+  "repository": "https://github.com/kentaro-m/mkissue",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",

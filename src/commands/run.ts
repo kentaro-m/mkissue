@@ -8,7 +8,7 @@ import * as Octokit from '@octokit/rest'
 export default class Run extends Command {
   static description = 'create issues from csv file'
 
-  static example = `$ csv2issue run issues.csv
+  static example = `$ mkissue run issues.csv
 Loaded issue data from csv file:
 
 Title                                                             Label

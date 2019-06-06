@@ -1,4 +1,4 @@
-:ticket: csv2issue
+:ticket: mkissue
 =========
 
 Create GitHub issues from importing CSV file.
@@ -6,32 +6,32 @@ Create GitHub issues from importing CSV file.
 ## :arrow_forward: Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g csv2issue
-$ csv2issue COMMAND
+$ npm install -g mkissue
+$ mkissue COMMAND
 running command...
 
-$ csv2issue (-v|--version|version)
-csv2issue/0.1.0 darwin-x64 node-v8.15.0
+$ mkissue (-v|--version|version)
+mkissue/0.1.0 darwin-x64 node-v8.15.0
 
-$ csv2issue --help [COMMAND]
+$ mkissue --help [COMMAND]
 USAGE
-  $ csv2issue COMMAND
+  $ mkissue COMMAND
 ...
 ```
 <!-- usagestop -->
 
 ## :video_game: Commands
 <!-- commands -->
-* [`csv2issue run [FILE]`](#csv2issue-run-file)
-* [`csv2issue help [COMMAND]`](#csv2issue-help-command)
+* [`mkissue run [FILE]`](#mkissue-run-file)
+* [`mkissue help [COMMAND]`](#mkissue-help-command)
 
-### `csv2issue run [FILE]`
+### `mkissue run [FILE]`
 
 Create issues from csv file.
 
 ```
 USAGE
-  $ csv2issue run [FILE]
+  $ mkissue run [FILE]
 
 ARGUMENTS
   FILE  where to load csv file
@@ -40,7 +40,7 @@ OPTIONS
   -h, --help       show CLI help
 
 EXAMPLES
-  $ csv2issue run issues.csv
+  $ mkissue run issues.csv
   Loaded issue data from csv file:
 
   Title                                                             Label
@@ -67,15 +67,15 @@ title,body,labels
 "Add CI/CD for using GitHub Actions",,"feature request"
 ```
 
-_See code: [src/commands/run.ts](https://github.com/csv2issue/csv2issue/blob/v0.1.0/src/commands/run.ts)_
+_See code: [src/commands/run.ts](https://github.com/mkissue/mkissue/blob/v0.1.0/src/commands/run.ts)_
 
-### `csv2issue help [COMMAND]`
+### `mkissue help [COMMAND]`
 
-Display help for csv2issue.
+Display help for mkissue.
 
 ```
 USAGE
-  $ csv2issue help [COMMAND]
+  $ mkissue help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
