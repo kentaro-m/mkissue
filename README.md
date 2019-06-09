@@ -86,7 +86,7 @@ EXAMPLES
   $ mkissue run issues.csv
   Loaded issue data from csv file:
 
-  Title                                                             Labels
+  Title                                                             Label
   Enable to install from npm registry                               feature request
   Save GitHub token for creating issues to local configuration file feature request
   Add ZenHub support                                                feature request, discussion
@@ -99,7 +99,7 @@ EXAMPLES
   Creating issues... done
 ```
 
-_See code: [src/commands/run.ts](https://github.com/kentaro-m/mkissue/blob/v1.0.2/src/commands/run.ts)_
+_See code: [src/commands/run.ts](https://github.com/kentaro-m/mkissue/blob/v1.0.3/src/commands/run.ts)_
 <!-- commandsstop -->
 
 ## :construction_worker: Development
