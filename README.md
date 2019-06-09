@@ -1,22 +1,50 @@
 :ticket: mkissue
 =========
+[![npm](https://img.shields.io/npm/v/mkissue.svg)](https://www.npmjs.com/package/mkissue)
+[![npm](https://img.shields.io/npm/dt/mkissue.svg)](https://www.npmjs.com/package/mkissue)
+![GitHub](https://img.shields.io/github/license/kentaro-m/mkissue.svg)
 
 Create GitHub issues from importing CSV file.
 
 ## :arrow_forward: Usage
-<!-- usage -->
-```sh-session
+
+### Create GitHub issues
+You need to create [personal access token for GitHub (scope:repo)](https://github.com/settings/tokens) before mkissue runs.
+
+```bash
+# Install tool
 $ npm install -g mkissue
-$ mkissue COMMAND
-running command...
-$ mkissue (-v|--version|version)
-mkissue/1.0.2 darwin-x64 node-v8.15.0
-$ mkissue --help [COMMAND]
-USAGE
-  $ mkissue COMMAND
-...
+
+# Create GitHub issues
+$ mkissue run issues.csv
+Loaded issue data from csv file:
+
+  Title                                                             Labels
+  Enable to install from npm registry                               feature request
+  Save GitHub token for creating issues to local configuration file feature request
+  Add ZenHub support                                                feature request, discussion
+  Add CI/CD for using GitHub Actions                                feature request
+
+  What is owner name?: kentaro-m
+  What is repository name?: create-issues-test
+  What is GitHub token?: ****************
+  Continue? [yes/no]: yes
+  Creating issues... done
+
+
 ```
-<!-- usagestop -->
+
+### Create CSV file contain issue data
+The header of CSV file contains need to title, body, and labels. Please refer to the template below.
+
+[mkissue template (Google Sheets)](https://docs.google.com/spreadsheets/d/1_AefuYDiQxnl-6-pzE7ppGbA3sSREruFnUcVCNNecLg/edit?usp=sharing)
+
+```csv
+title,body,labels
+titleA,bodyA,"good first issue,bug"
+titleB,bodyB,bug
+titleC,bodyC,enhancement
+```
 
 ## :video_game: Commands
 <!-- commands -->
@@ -58,7 +86,7 @@ EXAMPLES
   $ mkissue run issues.csv
   Loaded issue data from csv file:
 
-  Title                                                             Label
+  Title                                                             Labels
   Enable to install from npm registry                               feature request
   Save GitHub token for creating issues to local configuration file feature request
   Add ZenHub support                                                feature request, discussion
