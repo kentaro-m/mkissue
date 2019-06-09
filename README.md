@@ -10,7 +10,7 @@ $ npm install -g mkissue
 $ mkissue COMMAND
 running command...
 $ mkissue (-v|--version|version)
-mkissue/1.0.1 darwin-x64 node-v8.15.0
+mkissue/1.0.2 darwin-x64 node-v8.15.0
 $ mkissue --help [COMMAND]
 USAGE
   $ mkissue COMMAND
@@ -71,7 +71,7 @@ EXAMPLES
   Creating issues... done
 ```
 
-_See code: [src/commands/run.ts](https://github.com/kentaro-m/mkissue/blob/v1.0.1/src/commands/run.ts)_
+_See code: [src/commands/run.ts](https://github.com/kentaro-m/mkissue/blob/v1.0.2/src/commands/run.ts)_
 <!-- commandsstop -->
 
 ## :construction_worker: Development
