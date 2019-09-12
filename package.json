@@ -13,16 +13,21 @@
     "@oclif/plugin-help": "^2.1.6",
     "@octokit/rest": "^16.27.0",
     "@types/csv-parse": "^1.2.2",
+    "@types/jest": "^24.0.18",
     "@types/node": "^12.0.2",
+    "@types/request-promise-native": "^1.0.16",
     "cli-ux": "^5.2.1",
     "csv-parse": "^4.4.1",
+    "jest": "^24.9.0",
+    "request-promise-native": "^1.0.7",
+    "ts-jest": "^24.0.2",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.21.2",
     "globby": "^8.0.2",
     "ts-node": "^8.1.1",
-    "typescript": "^3.4.5"
+    "typescript": "^3.6.2"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -50,8 +55,25 @@
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "echo NO TESTS",
+    "test": "jest",
     "version": "oclif-dev readme && git add README.md"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/__tests__/**/*.test.ts"
+    ]
+  }
 }

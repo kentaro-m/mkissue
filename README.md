@@ -27,7 +27,10 @@ Loaded issue data from csv file:
 
   What is owner name?: kentaro-m
   What is repository name?: create-issues-test
+  What is GitHub host?: https://api.github.com
   What is GitHub token?: ****************
+  What is ZenHub host?: https://api.zenhub.io
+  What is ZenHub token?: ****************
   Continue? [yes/no]: yes
   Creating issues... done
 
@@ -40,11 +43,14 @@ The header of CSV file contains need to title, body, and labels. Please refer to
 [mkissue template (Google Sheets)](https://docs.google.com/spreadsheets/d/1_AefuYDiQxnl-6-pzE7ppGbA3sSREruFnUcVCNNecLg/edit?usp=sharing)
 
 ```csv
-title,body,labels
-titleA,bodyA,"good first issue,bug"
-titleB,bodyB,bug
-titleC,bodyC,enhancement
+title,body,labels,milestone,estimate,epic-url
+titleA,bodyA,"good first issue,bug",SPRINT001,2,https://github.com/owner/repo/issue/1
+titleB,bodyB,bug,SPRINT001,5,https://github.com/owner/repo/issue/1
+titleC,bodyC,enhancement,SPRINT001,13,https://github.com/owner/repo/issue/2
 ```
+
+Milestone, estimate and epic-url are optional.
+If you want to set estimate or epic-url, you must set ZenHub token.
 
 ## :video_game: Commands
 <!-- commands -->
@@ -94,7 +100,10 @@ EXAMPLES
 
   What is owner name?: kentaro-m
   What is repository name?: create-issues-test
+  What is GitHub host?: https://api.github.com
   What is GitHub token?: ****************
+  What is ZenHub host?: https://api.zenhub.io
+  What is ZenHub token?: ****************
   Continue? [yes/no]: yes
   Creating issues... done
 ```
